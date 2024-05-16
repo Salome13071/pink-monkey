@@ -24,13 +24,14 @@ a, button{
     justify-content: space-between;
 }
 
-.header-main-logo {
+.header-main-logo  {
     width: fit-content;
     display: flex;
     margin-left: 80px;
+    align-items: center;
 }
 
-.header-main-logo img {
+.header-main-logo a img {
     align-self: center;
 }
 
@@ -65,6 +66,7 @@ a, button{
 .header-main-nav ul li a:hover{
     color: #F99DBC;
     border-bottom: 2px solid #F99DBC ;
+    transition: color 0.3s;
 }
 
 .header-main-icons {

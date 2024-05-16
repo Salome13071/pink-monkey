@@ -17,8 +17,8 @@
 }
 
 .Go-to-cataloge:hover {
-    color: #F99DBC;
-    border-bottom: 2px solid #F99DBC;
+    color: #f0afc5;
+    border-bottom: 2px solid #f99dbc;
     cursor: pointer;
     transition: color 0.3s;
 }
