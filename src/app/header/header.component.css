@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+body {
+    background-color: #FBFBFB;
+    overflow-x: hidden !important;
+    background-size: contain;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+a, button{
+    cursor: pointer;
+}
+
+.header-main {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main-logo {
+    width: fit-content;
+    display: flex;
+    margin-left: 80px;
+}
+
+.header-main-logo img {
+    align-self: center;
+}
+
+.header-main-nav {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-main-nav ul {
+   list-style: none;
+   margin-left: 80px;
+}
+
+.header-main-nav ul li {
+    display: inline;
+    float: left;
+}
+
+.header-main-nav ul li a {
+    padding: 0 20px;
+    font-family: "Irish Grover", system-ui;
+    font-size: larger;
+    line-height: 75px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 100%;
+}
+
+.header-main-nav ul li a:hover{
+    color: #F99DBC;
+    border-bottom: 2px solid #F99DBC ;
+}
+
+.header-main-icons {
+    width: fit-content;
+    height: 100%;
+    padding-right: 120px;
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    cursor: pointer;
+}
+
+.header-main-icon {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-main-icon-search{
+    background-image: url(../../assets/images/search.svg);
+}
+
+.header-main-icon-shopping{
+    background-image: url(../../assets/images/shop.svg);
+}
+
+.header-main-icon-favorite{
+    background-image: url(../../assets/images/8666647_heart_icon.svg);
+}
+
+.header-main-icon-user{
+    background-image: url(../../assets/images/8666609_user_icon.svg);
+}
+
+
+ 

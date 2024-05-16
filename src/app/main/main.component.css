@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+.main-image-box img {
+    padding-top: 60px;
+    width: 100%;
+    height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.Go-to-cataloge:hover {
+    color: #F99DBC;
+    border-bottom: 2px solid #F99DBC;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.Go-to-cataloge {
+    width: 345px;
+    height: 70px;
+    background-color: #FF8C00;
+    color: white;
+    border-radius: 30px;
+    font-family: "Irish Grover";
+    font-size: 22px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 12px;
+
+}
