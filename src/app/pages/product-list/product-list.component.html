@@ -1,0 +1,10 @@
+<div class="menu-div">
+    <div class="meniu-vell">
+        <h1>Products</h1>
+        
+    </div>
+</div>
+
+<div class="product-list">
+    <app-product *ngFor="let product of productList" [currency]="currency" [payload]="product"></app-product>
+</div>

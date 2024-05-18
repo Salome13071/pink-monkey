@@ -1,0 +1,23 @@
+.menu-div {
+    margin: 48px 0;
+}
+
+.meniu-vell {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 100px;
+}
+
+.meniu-vell h1 {
+    font-size: 40px;
+    font-family: "Irish Grover";
+}
+
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 40px;
+}

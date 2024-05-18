@@ -1,0 +1,26 @@
+<div class="card-section">
+    <div class="card-section-block">
+        <div class="card-section-img">
+            <img src={{payload.image}} alt="#">
+        </div>
+        <div class="card-section-text">
+            <h1>{{payload.title}}</h1>
+            <div class="price-part">
+                <h2 [ngClass]="payload.sale > 0 ? 'price-line-through' : ''">{{currency}}{{ payload.price.toFixed(2)}}
+                </h2>
+                <h2 *ngIf="payload.sale > 0">{{currency}}{{saledPrice(payload.price, payload.sale)}}</h2>
+                <p>{{payload.saldItemsCount}} ordered</p>
+            </div>
+            <div class="stars-btn-text">
+                <div class="stars-part">
+                    <img src="../../../../assets/images/star.svg" alt="stars">
+                    <img src="../../../../assets/images/star.svg" alt="stars">
+                    <img src="../../../../assets/images/star.svg" alt="stars">
+                    <img src="../../../../assets/images/star.svg" alt="stars">
+                    <img src="../../../../assets/images/star-nocolor.svg" alt="stars">
+                </div>
+                <button class="add-cart">Add to cart</button>
+            </div>
+        </div>
+    </div>
+</div>

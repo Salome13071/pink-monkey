@@ -1,0 +1,65 @@
+.card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    padding: 40px 0;
+
+}
+
+.card-section-img {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-section-img img {
+    width: 330px;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.card-section-text {
+    width: 330px;
+    height: 180px;
+    border-radius: 0px 0px 20px 20px;
+    background: #f7c0d2;
+    padding: 0 20px;
+
+}
+
+.card-section-text h1 {
+    font-family: "Irish Grover";
+    font-size: 32px;
+    padding-bottom: 4px;
+
+}
+
+.price-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.price-part h2 {
+    font-size: 20px;
+}
+
+.price-line-through {
+    text-decoration: line-through;
+    opacity: 30%;
+}
+
+.stars-btn-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center
+}
+
+.add-cart {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
