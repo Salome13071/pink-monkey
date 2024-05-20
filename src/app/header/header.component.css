@@ -22,12 +22,12 @@ a, button{
     height: 80px;
     display: flex;
     justify-content: space-between;
+    padding: 0 40px;
 }
 
 .header-main-logo  {
     width: fit-content;
     display: flex;
-    margin-left: 80px;
     align-items: center;
 }
 
@@ -44,7 +44,7 @@ a, button{
 
 .header-main-nav ul {
    list-style: none;
-   margin-left: 80px;
+   
 }
 
 .header-main-nav ul li {
@@ -68,7 +68,10 @@ a, button{
     border-bottom: 2px solid #F99DBC ;
     transition: color 0.3s;
 }
-
+.active{
+    color: #F99DBC;
+    border-bottom: 2px solid #F99DBC ;
+}
 .header-main-icons {
     width: fit-content;
     height: 100%;
@@ -86,9 +89,6 @@ a, button{
     background-size: cover;
 }
 
-.header-main-icon-search{
-    background-image: url(../../assets/images/search.svg);
-}
 
 .header-main-icon-shopping{
     background-image: url(../../assets/images/shop.svg);

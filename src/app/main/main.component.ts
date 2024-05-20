@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -9,5 +9,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+ 
+  constructor(public router:Router){}
 
+  goToProducts() {
+    this.router.navigate(['/products']);
+  }
 }

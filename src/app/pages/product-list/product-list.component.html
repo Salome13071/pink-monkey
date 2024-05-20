@@ -6,5 +6,5 @@
 </div>
 
 <div class="product-list">
-    <app-product *ngFor="let product of productList" [currency]="currency" [payload]="product"></app-product>
+    <app-product *ngFor="let product of productService.filtredList" [currency]="currency" [payload]="product"></app-product>
 </div>

@@ -7,7 +7,8 @@ export const routes: Routes = [
     {
         path: '',
         component: MainComponent,
-        title:'Home'
+        title:'Home',
+        pathMatch: 'full'
     },
 
     {

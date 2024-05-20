@@ -16,14 +16,14 @@
     padding: 50px;
 }
 
-.Go-to-cataloge:hover {
+.go-to-products-button:hover {
     color: #f0afc5;
     border-bottom: 2px solid #f99dbc;
     cursor: pointer;
     transition: color 0.3s;
 }
 
-.Go-to-cataloge {
+.go-to-products-button {
     width: 345px;
     height: 70px;
     background-color: #FF8C00;
