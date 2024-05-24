@@ -1,0 +1,10 @@
+.filter-section{
+    display: flex;
+    gap: 6px;
+}
+
+
+
+ label {
+    border-color: #f7c0d2;
+    }

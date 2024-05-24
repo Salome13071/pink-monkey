@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink, RouterModule } from '@angular/router';
+import { NavigationStart, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 
 @Component({
@@ -12,9 +12,7 @@ import { SearchComponent } from '../search/search.component';
 })
 export class HeaderComponent {
   searchData: string = '';
-  constructor(private router: Router ) {
-
-  }
+  constructor(private router: Router,) {}
   
   isMenuOpen: boolean = false;
 

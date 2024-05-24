@@ -1,11 +1,10 @@
-<!-- <div (click)="toggleSearch(); preventCloseOnClick()" class="header-main-icon header-main-icon-search">
-<input (click)="preventCloseOnClick()" *ngIf="searchOpen" class="input" type="text" placeholder="Search..">
-  </div> -->
 
-  <form class="search">
+
+<form class="search">
     <div class="search__wrapper">
-      <input type="text" name="" placeholder="Search for..." class="search__field">
-      <button  type="submit" class="header-main-icon-search search__icon"></button>
+        <input type="text" name="searchQuery" placeholder="Search for..." class="search__field" [(ngModel)]="searchQuery"
+            (keyup)="search()">
+        <button type="submit" class="header-main-icon-search search__icon"></button>
+        <div></div>
     </div>
-  </form>
-    
+</form>
