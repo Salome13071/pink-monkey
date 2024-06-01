@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { NavigationStart, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule,RouterLink, SearchComponent, RouterModule],
+  imports: [CommonModule,RouterLink, SearchComponent, RouterModule, NgIf],
   standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
@@ -16,7 +16,7 @@ export class HeaderComponent {
   
   isMenuOpen: boolean = false;
 
-  toggleMenu(): void {
+  toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
 

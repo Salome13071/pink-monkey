@@ -20,8 +20,6 @@ export class FilterComponent {
 
 
   applyFilter() {
-    console.log(this.selectedFilter);
-
     if (this.selectedFilter == 'all') {
       this.productService.filtredList = this.productService.productList;
       return

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 .main-image-box img {
+    
     padding-top: 60px;
     width: 100%;
     height: 630px;
@@ -8,6 +9,20 @@
     background-size: cover;
     object-fit: cover;
 }
+
+.losung-text{
+    position: absolute;
+    width: 380px;
+    height: 340px;
+    font-size: 64px;
+    font-family: 'Irish grover';
+    color: black;
+    top: 18%;
+    left: 50%;
+    line-height: 55px;
+    text-align: center;
+}
+
 
 .button-div {
     display: flex;
@@ -37,4 +52,29 @@
     display: flex;
     gap: 12px;
 
+}
+
+
+@media screen and (max-width: 830px){
+
+    .losung-text{
+        position: absolute;
+        width: 200px;
+        font-size: 36px;
+        font-family: 'Irish grover';
+        color: black;
+        top: 18%;
+        left: 20%;
+        line-height: 55px;
+        text-align: center;
+    }
+
+
+    .go-to-products-button{
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        position: absolute;
+        top: 67%;
+    }
 }

@@ -25,7 +25,7 @@ export class SearchComponent {
       return;
     }
 
-    if(this.searchQuery.length >=3) {
+    if(this.searchQuery.length >=1) {
       this.productService.filtredList =
       this.productService.productList.filter(
         item => item.title.toLowerCase()

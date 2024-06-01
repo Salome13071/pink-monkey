@@ -1,15 +1,30 @@
 <header class="header-main">
+
     <div class="header-main-logo">
         <a routerLink="">
             <img src="../../assets/images/Main logo text.png" alt="Pink Monkey logo">
         </a>
     </div>
-    <div>
+    <div class="headerNav">
+        <button class="burger-menu" (click)="toggleMenu()">
+            <img src="../../assets/images/manu mobile button.svg" alt="">
+        </button>
         <nav class="header-main-nav">
             <ul>
                 <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
                 <li> <a routerLink="">About</a></li>
-                <li> <a routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Porducts</a></li>
+                <li> <a routerLink="/products" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Porducts</a></li>
+                <li><a routerLink="">Contacts</a></li>
+                <li><a routerLink="">Blog</a></li>
+            </ul>
+        </nav>
+        <nav class="header-main-nav-mobile" *ngIf="isMenuOpen">
+            <ul (click)="toggleMenu()">
+                <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+                <li> <a routerLink="">About</a></li>
+                <li> <a routerLink="/products" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">Porducts</a></li>
                 <li><a routerLink="">Contacts</a></li>
                 <li><a routerLink="">Blog</a></li>
             </ul>
@@ -17,14 +32,14 @@
     </div>
 
     <div class="header-main-icons">
-        
+
         <div *ngIf="searchActive()"><app-search></app-search></div>
         <div class="header-main-icon header-main-icon-shopping"></div>
         <div class="header-main-icon header-main-icon-favorite"></div>
         <div class="header-main-icon header-main-icon-user"></div>
     </div>
 
-    <!-- <button (click)="toggleMenu()">
-        asdasdasd
-    </button> -->
+
+
+
 </header>

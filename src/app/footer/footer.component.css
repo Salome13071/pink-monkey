@@ -22,3 +22,11 @@ font-size: 18px;
 text-align: center;
 
 }
+
+
+@media screen and (max-width: 830px){
+    .main-div{
+        display: grid;
+        grid-template-columns:  1fr;
+    }
+}

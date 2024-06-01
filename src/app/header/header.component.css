@@ -13,7 +13,8 @@ body {
     display: none;
 }
 
-a, button{
+a,
+button {
     cursor: pointer;
 }
 
@@ -23,28 +24,28 @@ a, button{
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    align-items: baseline;
 }
 
-.header-main-logo  {
-    width: fit-content;
-    display: flex;
-    align-items: center;
-}
 
 .header-main-logo a img {
     align-self: center;
+    height: 40px;
 }
 
+
 .header-main-nav {
-    width: fit-content;
-    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    left: 0;
 }
 
 .header-main-nav ul {
-   list-style: none;
-   
+    list-style: none;
+    display: flex;
+
 }
 
 .header-main-nav ul li {
@@ -63,19 +64,20 @@ a, button{
     height: 100%;
 }
 
-.header-main-nav ul li a:hover{
+.header-main-nav ul li a:hover {
     color: #F99DBC;
-    border-bottom: 2px solid #F99DBC ;
+    border-bottom: 2px solid #F99DBC;
     transition: color 0.3s;
 }
-.active{
+
+.active {
     color: #F99DBC;
-    border-bottom: 2px solid #F99DBC ;
+    border-bottom: 2px solid #F99DBC;
 }
+
 .header-main-icons {
     width: fit-content;
     height: 100%;
-    padding-right: 120px;
     display: flex;
     align-items: center;
     column-gap: 30px;
@@ -85,22 +87,122 @@ a, button{
 .header-main-icon {
     width: 20px;
     height: 20px;
+    display: block;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
-.header-main-icon-shopping{
+.header-main-icon-shopping {
     background-image: url(../../assets/images/shop.svg);
 }
 
-.header-main-icon-favorite{
+.header-main-icon-favorite {
     background-image: url(../../assets/images/8666647_heart_icon.svg);
 }
 
-.header-main-icon-user{
+.header-main-icon-user {
     background-image: url(../../assets/images/8666609_user_icon.svg);
 }
 
+.burger-menu {
+    display: none;
+}
 
- 
+
+
+/* ------  media screen -----  */
+
+@media screen and (max-width: 1040px) {
+
+
+    .header-main-nav ul li a {
+        font-family: "Irish Grover", system-ui;
+        font-size: medium;
+        line-height: 75px;
+        text-decoration: none;
+        color: black;
+        display: block;
+
+    }
+
+    @media screen and (min-width: 831px) {
+        .header-main-nav-mobile {
+            display: none;
+        }
+    }
+
+
+    @media screen and (max-width: 830px) {
+
+        .header-main-icons {
+            display: none;
+        }
+
+        .header-main {
+            
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .header-main-nav {
+            display: none;
+        }
+
+        .header-main-nav-mobile {
+            position: absolute;
+            right: 0;
+            top: 70px;
+            backdrop-filter: blur(30px);
+            bottom: 0;
+            width: 210px;
+            height: 200px;
+            transition: left 0.7s ease;
+            z-index: 9;
+        }
+
+        .header-main-nav-mobile ul {
+            list-style: none;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        .header-main-nav-mobile ul li {
+            width: 100%;
+        }
+
+        .header-main-nav-mobile ul li a {
+            line-height: 3;
+            text-align: center;
+            width: 100%;
+            height: 46px;
+            border: none;
+            color: black;
+            text-decoration: none;
+            font-family: "Irish Grover", system-ui;
+        }
+
+        .header-main-nav-mobile ul li a:hover {
+            color: #F99DBC;
+            border-bottom: none;
+            transition: color 0.3s;
+        }
+
+        .burger-menu {
+            cursor: pointer;
+            background-color: white;
+            border: none;
+            display: block;
+            justify-content: end;
+            right: 0;
+
+        }
+
+        .header-main-logo {
+            transform: scale(0.9);
+        }
+
+
+    }
+}
