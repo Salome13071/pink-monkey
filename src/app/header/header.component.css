@@ -23,8 +23,9 @@ button {
     height: 80px;
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 100px;
     align-items: baseline;
+
 }
 
 
@@ -115,6 +116,9 @@ button {
 
 @media screen and (max-width: 1040px) {
 
+    .header-main {
+        padding: 0 30px;
+    }
 
     .header-main-nav ul li a {
         font-family: "Irish Grover", system-ui;
@@ -140,7 +144,7 @@ button {
         }
 
         .header-main {
-            
+
             justify-content: space-between;
             padding: 20px;
         }
@@ -156,7 +160,7 @@ button {
             backdrop-filter: blur(30px);
             bottom: 0;
             width: 210px;
-            height: 200px;
+            height: 240px;
             transition: left 0.7s ease;
             z-index: 9;
         }

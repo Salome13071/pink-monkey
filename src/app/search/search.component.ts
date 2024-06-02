@@ -20,18 +20,9 @@ export class SearchComponent {
   }
   
   search() {
-    if(this.searchQuery === '') {
-      this.productService.filtredList = this.productService.productList;
-      return;
-    }
-
-    if(this.searchQuery.length >=1) {
-      this.productService.filtredList =
-      this.productService.productList.filter(
-        item => item.title.toLowerCase()
-          .includes(this.searchQuery.toLowerCase())
-      )
-    }
+      this.productService.filterProducts('title', this.searchQuery).subscribe(response =>{
+        this.productService.productList = response;
+      })
   }
 
 

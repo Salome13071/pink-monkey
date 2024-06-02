@@ -6,4 +6,5 @@ export class ProductItemDto {
     sale: number = 0;
     vegan: boolean = false;
     diabetic: boolean = false;
+    saleOn: boolean = false;
 }

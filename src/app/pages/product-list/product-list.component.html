@@ -6,7 +6,7 @@
     <app-filter></app-filter>
     
 </div>
-
-<div class="product-list">
-    <app-product *ngFor="let product of productService.filtredList" [currency]="currency" [payload]="product"></app-product>
+<div *ngIf="isLoading">Loading...</div>
+<div class="product-list" *ngIf="!isLoading">
+    <app-product *ngFor="let product of productService.productList" [currency]="currency" [payload]="product"></app-product>
 </div>

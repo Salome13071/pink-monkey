@@ -20,17 +20,27 @@ export class FilterComponent {
 
 
   applyFilter() {
+    let key: string = '';
+    let value: any = ''
     if (this.selectedFilter == 'all') {
-      this.productService.filtredList = this.productService.productList;
-      return
+      key = 'search';
+      value = '';
+    }
+    if (this.selectedFilter === 'sale') {
+      key = 'saleOn';
+      value = true;
+    }
+    if (this.selectedFilter === 'vegan') {
+      key = 'vegan',
+        value = true;
+    }
+    if (this.selectedFilter === 'diabetic') {
+      key = 'diabetic',
+        value = true;
     }
 
-    this.productService.filtredList = this.productService.productList.filter(item => {
-      if (this.selectedFilter === 'sale') return item.sale > 0;
-      if (this.selectedFilter === 'vegan') return item.vegan;
-      if (this.selectedFilter === 'diabetic') return item.diabetic;
-      return false;
-
-    })
+    this.productService.filterProducts(key, value).subscribe(res => {
+        this.productService.productList = res;
+    });
   }
 }
