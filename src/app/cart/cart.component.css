@@ -1,0 +1,35 @@
+.cart-container{
+height: 700px;
+background-color: rgb(252, 223, 244);
+margin:  40px 80px;
+display: flex;
+
+}
+
+.cart-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: inherit;
+}
+
+.cartStyle{
+    width: 220px;
+    height: 300px;
+    border: 2px salmon solid;
+    border-radius: 20px;
+    padding: 8px;
+}
+.cart-container-img{
+    width: 200px;
+     height: 200px;
+}
+
+.remove-button{
+width: 80px;
+height: 40px;
+border-radius: 30px;
+border-style: none;
+background-color: salmon;
+color: black;
+margin: 40px;
+}

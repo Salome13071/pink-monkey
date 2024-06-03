@@ -27,6 +27,14 @@ export class HeaderComponent {
     return false; 
   }
 
+  // sticyNav(): any {
+  //   if (window.Headers>= sticky) {
+  //     navbar.classList.add("sticky")
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //   }
+  // }
+
 }
 
 
