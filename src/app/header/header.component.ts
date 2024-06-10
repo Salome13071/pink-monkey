@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { NavigationStart, Router, RouterLink, RouterModule } from '@angular/router';
 import { SearchComponent } from '../search/search.component';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ import { SearchComponent } from '../search/search.component';
 })
 export class HeaderComponent {
   searchData: string = '';
-  constructor(private router: Router,) {}
+  constructor(private router: Router, public productServise: ProductService) {}
   
   isMenuOpen: boolean = false;
 

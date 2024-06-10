@@ -15,17 +15,10 @@ export class ProductComponent {
   @Input() currency: string = '';
   @Input() payload: ProductItemDto = {} as ProductItemDto;
 
-  constructor(private productService: ProductService) {}
+  constructor(public productService: ProductService) {}
 
   addToCart(product: ProductItemDto) {
-    console.log('ddas')
     this.productService.addToCart(product);
   }
-
-  saledPrice(price: number, sale: number){
-     
-      return (price - ((price * sale) / 100)).toFixed(2)
-    
   
-  }
 }

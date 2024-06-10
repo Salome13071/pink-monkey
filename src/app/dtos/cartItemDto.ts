@@ -4,4 +4,6 @@ export class CartItemDto {
     public title: string = '';
     public image: string = '';
     public price: number = 0;
+    public sale: number = 0;
+    
 }

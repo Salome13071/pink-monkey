@@ -1,16 +1,14 @@
-<div class="shopping-list">
-    <h2>Your Shopping List</h2>
+<div class="favorite-list">
+    <h2>Your Favorite Products List</h2>
 </div>
 
 
-<div class="cart-container">
+<!-- <div class="cart-container">
 
-
-    <div *ngIf="!productService.cartList">Your cart is empty</div>
+    <div *ngIf="!productService.cartList">Your Favorite Products List is empty</div>
 
     <div class="cart-list" *ngFor="let item of productService.cartList">
 
-        
             <img class="cart-container-img" [src]="item.image" alt="{{ item.title }}">
             <div class="cartStyle-textBox">
                 <h3> {{ item.title }}</h3>
@@ -28,7 +26,7 @@
                 </div>
 
                 <div>
-                    <button (click)="removeProductFromCart(item.productId)" class="remove-button">Remove</button>
+                    <button (click)="removeProductFromCart(item.productId)" class="remove-button">Add To Cart</button>
                 </div>
             </div>
     </div>
@@ -36,5 +34,5 @@
     <div class="price-container">
         Total Price: {{currency}} {{getTotalCartPrice()}}
     </div>
-</div>
+</div> -->
 

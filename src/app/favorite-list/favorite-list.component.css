@@ -1,0 +1,18 @@
+
+.favorite-list {
+    margin-left: 80px;
+    margin-top: 40px;
+
+}
+
+
+
+@media screen  and (max-width: 830px){
+   
+    .favorite-list{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    
+    }
+}

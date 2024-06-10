@@ -27,21 +27,22 @@ export class ProductService {
       const existingItemIndex = cart.findIndex(item => item.productId === product.id);
       if (existingItemIndex >= 0){
         cart[existingItemIndex].count++
-        this.editCart('cart', JSON.stringify(this.cartList));
+        this.editCart(this.cartList);
       }else{
         const newItem = new CartItemDto();
         newItem.productId = product.id
         newItem.count = 1;
         newItem.image = product.image,
         newItem.price = product.price;
+        newItem.sale = product.sale;
         newItem.title = product.title
         this.cartList.push(newItem)
-        this.editCart('cart', JSON.stringify(this.cartList));
+        this.editCart(this.cartList);
       }
   }
 
-  editCart(key: string, value: string): void {
-    localStorage.setItem(key, value);
+  editCart(value: CartItemDto[]): void {
+    localStorage.setItem('cart', JSON.stringify(value));
   }
 
   getCart(): CartItemDto[] {
@@ -52,9 +53,14 @@ export class ProductService {
     return this.cartList;
   }
 
-  clearCart(): void {
+  clearCart(): any {
     localStorage.removeItem('cart');
     this.cartList = [];
   }
+
+  saledPrice(price: number, sale: number){
+     
+    return (price - ((price * sale) / 100)).toFixed(2)
+}
 
 }

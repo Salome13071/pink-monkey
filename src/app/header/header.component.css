@@ -25,6 +25,7 @@ button {
     justify-content: space-between;
     padding: 0 100px;
     align-items: baseline;
+    position: sticky !important;
 
 }
 
@@ -71,10 +72,7 @@ button {
     transition: color 0.3s;
 }
 
-.active {
-    color: #F99DBC;
-    border-bottom: 2px solid #F99DBC;
-}
+
 
 .header-main-icons {
     width: fit-content;
@@ -106,6 +104,19 @@ button {
     background-image: url(../../assets/images/8666609_user_icon.svg);
 }
 
+.cartlistcounter{
+    width: 24px;
+    position: absolute;
+    background: #F99DBC;
+    display: flex;
+    justify-content: center;
+    margin-left: 12px;
+    margin-bottom: 42px;
+    border-radius: 50%;
+    margin-top: -22px;
+}
+
+
 .burger-menu {
     display: none;
 }
@@ -119,6 +130,11 @@ button {
 .sticky + .content {
     padding-top: 60px;
   }
+
+  .active {
+    color: #F99DBC !important;
+    border-bottom: 2px solid #F99DBC;
+}
 
 
 /* ------  media screen -----  */

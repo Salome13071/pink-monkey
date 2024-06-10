@@ -1,35 +1,110 @@
-.cart-container{
-height: 700px;
-background-color: rgb(252, 223, 244);
-margin:  40px 80px;
-display: flex;
-
+.cart-container {
+    margin: 40px 80px;
+}
+ 
+.price-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive;
+    color: black;
+    font-size: 24px;
+    width: 300px;
+    height: 80px;
+    border: grey solid;
+    border-radius: 8px;
+    margin: auto;
+}
+.cart-list {
+    display: flex;
+    gap: 32px;
+    padding-bottom: 24px;
 }
 
-.cart-list{
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: inherit;
+.cartStyle {
+    padding: 24px;
+    justify-content: center;
 }
 
-.cartStyle{
+.cart-container-img {
+    width: 180px;
+    height: 160px;
+    border-radius: 8px;
+    
+}
+
+.cartStyle-textBox{
     width: 220px;
-    height: 300px;
-    border: 2px salmon solid;
-    border-radius: 20px;
-    padding: 8px;
+    height: 160px;
 }
-.cart-container-img{
-    width: 200px;
-     height: 200px;
+.cartStyle-textBox h3{
+    font-family: "Irish Grover";
+    font-size: 18px;
+    padding-top: 8px;
+}
+.cartStyle-textBox-price{
+display: flex;
+gap: 8px;
+}
+.cartStyle-textBox-price p{
+font-size: 18px;
 }
 
-.remove-button{
-width: 80px;
-height: 40px;
-border-radius: 30px;
-border-style: none;
-background-color: salmon;
-color: black;
-margin: 40px;
+.remove-button {
+    width: 75px;
+    height: 28px;
+    border-style: none;
+    background-color: #FF8C00;
+    color: white;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.shopping-list {
+    margin-left: 80px;
+    margin-top: 40px;
+
+}
+
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity-container input[type="text"] {
+    width: 50px;
+    height: 26px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.quantity-container button {
+    width: 26px;
+    height: 26px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #F99DBC;
+}
+.price-line-through {
+    text-decoration: line-through;
+    opacity: 30%;
+}
+
+
+@media screen  and (max-width: 830px){
+    .cart-container {
+        margin: 20px 30px;
+    } 
+    .shopping-list{
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+    
+    }
 }
