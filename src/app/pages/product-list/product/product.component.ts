@@ -20,5 +20,9 @@ export class ProductComponent {
   addToCart(product: ProductItemDto) {
     this.productService.addToCart(product);
   }
+
+  toggleFavorite(product: ProductItemDto) {
+    this.productService.toggleFavorite(product);
+  }
   
 }

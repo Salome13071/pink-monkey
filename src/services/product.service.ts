@@ -7,11 +7,13 @@ import { CartItemDto } from "../app/dtos/cartItemDto";
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  
+
   public productList: ProductItemDto[] = [];
   public cartList: CartItemDto[] = [];
+  public favoriteList: ProductItemDto[] = [];
 
   constructor(private http: HttpClient) {
+    this.favoriteList = this.getFavorites();
   }
 
   getProductList(): Observable<ProductItemDto[]> {
@@ -24,21 +26,21 @@ export class ProductService {
 
   addToCart(product: ProductItemDto): void {
     const cart = this.getCart()
-      const existingItemIndex = cart.findIndex(item => item.productId === product.id);
-      if (existingItemIndex >= 0){
-        cart[existingItemIndex].count++
-        this.editCart(this.cartList);
-      }else{
-        const newItem = new CartItemDto();
-        newItem.productId = product.id
-        newItem.count = 1;
-        newItem.image = product.image,
+    const existingItemIndex = cart.findIndex(item => item.productId === product.id);
+    if (existingItemIndex >= 0) {
+      cart[existingItemIndex].count++
+      this.editCart(this.cartList);
+    } else {
+      const newItem = new CartItemDto();
+      newItem.productId = product.id
+      newItem.count = 1;
+      newItem.image = product.image,
         newItem.price = product.price;
-        newItem.sale = product.sale;
-        newItem.title = product.title
-        this.cartList.push(newItem)
-        this.editCart(this.cartList);
-      }
+      newItem.sale = product.sale;
+      newItem.title = product.title
+      this.cartList.push(newItem)
+      this.editCart(this.cartList);
+    }
   }
 
   editCart(value: CartItemDto[]): void {
@@ -58,9 +60,29 @@ export class ProductService {
     this.cartList = [];
   }
 
-  saledPrice(price: number, sale: number){
-     
+  saledPrice(price: number, sale: number) {
+
     return (price - ((price * sale) / 100)).toFixed(2)
-}
+  }
+
+  toggleFavorite(product: ProductItemDto): void {
+    const index = this.favoriteList.findIndex(item => item.id === product.id);
+    if (index >= 0) {
+      this.favoriteList.splice(index, 1);
+    } else {
+      this.favoriteList.push(product);
+    }
+    this.editFavorites(this.favoriteList);
+  }
+
+  editFavorites(favorites: ProductItemDto[]): void {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }
+
+  getFavorites(): ProductItemDto[] {
+    const favorites = localStorage.getItem('favorites');
+    return favorites ? JSON.parse(favorites) : [];
+  }
+
 
 }

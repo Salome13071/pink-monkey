@@ -1,7 +1,7 @@
 <div class="card-section">
     <div class="card-section-block">
         <div class="card-section-img">
-            <img  class="card-section-img-fav" src="../../../../assets/images/heart-icon.svg" alt="">
+            <img (click)="toggleFavorite(payload)" class="card-section-img-fav" src="../../../../assets/images/heart-icon.svg" alt="">
             <img class="card-section-img-img" src={{payload.image}} alt="#">
         </div>
         <div class="card-section-text">

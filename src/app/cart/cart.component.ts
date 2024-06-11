@@ -14,12 +14,10 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 export class CartComponent  implements OnInit{
 
   public count: number = 1; 
-
-  constructor(public productService: ProductService) { }
   public currency: string = '$';
+  constructor(public productService: ProductService) { }
   
-
-
+  
   ngOnInit(): void {
     this.getCartList();
   }

@@ -2,37 +2,27 @@
     <h2>Your Favorite Products List</h2>
 </div>
 
+<div class="cart-container">
+    <div *ngIf="productService.favoriteList.length === 0">Your favorite list is empty</div> 
+</div>
 
-<!-- <div class="cart-container">
-
-    <div *ngIf="!productService.cartList">Your Favorite Products List is empty</div>
-
-    <div class="cart-list" *ngFor="let item of productService.cartList">
-
-            <img class="cart-container-img" [src]="item.image" alt="{{ item.title }}">
-            <div class="cartStyle-textBox">
-                <h3> {{ item.title }}</h3>
-                <div class="cartStyle-textBox-price" >
-                    <p [ngClass]="item.sale > 0 ? 'price-line-through' : ''">  {{currency}} {{ item.price.toFixed(2) }} </p>
-                    <p *ngIf="item.sale > 0">{{currency}}{{productService.saledPrice(item.price, item.sale)}}</p>
-                </div>
-                
-                
-
-                <div class="quantity-container">
-                    <button (click)="decrement(item.productId)">-</button>
-                    <input type="text" [value]="item.count" readonly>
-                    <button (click)="increment(item.productId)">+</button>
-                </div>
-
-                <div>
-                    <button (click)="removeProductFromCart(item.productId)" class="remove-button">Add To Cart</button>
-                </div>
+<div class="favorite-list" *ngFor="let item of productService.favoriteList">
+    <div class="product-item">
+        <img [src]="item.image" alt="{{ item.title }}">
+        <div class="product-details">
+            <h3>{{ item.title }}</h3>
+            <div class="cartStyle-textBox-price" >
+                <p [ngClass]="item.sale > 0 ? 'price-line-through' : ''">  {{currency}} {{ item.price.toFixed(2) }} </p>
+                <p *ngIf="item.sale > 0">{{currency}}{{productService.saledPrice(item.price, item.sale)}}</p>
             </div>
+            <button (click)="removeFavorite(item)">Remove from Favorites</button>
+            <div>
+                <button  class="add-cart"  (click)="addToCart(item)"><img src="../../../../assets/images/shop.svg" alt="#"></button>
+            </div>
+        </div>
     </div>
+</div>
 
-    <div class="price-container">
-        Total Price: {{currency}} {{getTotalCartPrice()}}
-    </div>
-</div> -->
+
+
 
