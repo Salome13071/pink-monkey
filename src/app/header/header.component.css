@@ -121,15 +121,15 @@ button {
     display: none;
 }
 
-.sticky{
+/* .sticky{
     position: fixed;
     top: 0;
     width: 100%;
-}
+} */
 
-.sticky + .content {
+/* .sticky + .content {
     padding-top: 60px;
-  }
+  } */
 
   .active {
     color: #F99DBC !important;

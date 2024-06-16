@@ -1,5 +1,5 @@
 export class ProductItemDto {
-    id: number = 0;
+    id: string = '0';
     title: string = '';
     image: string = '';
     price: number = 0;
@@ -8,4 +8,6 @@ export class ProductItemDto {
     vegan: boolean = false;
     diabetic: boolean = false;
     saleOn: boolean = false;
+    isInFav: boolean = false;
+    description: string = '';
 }

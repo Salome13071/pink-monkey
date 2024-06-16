@@ -3,6 +3,7 @@ import { MainComponent } from './main/main.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { FavoriteListComponent } from './favorite-list/favorite-list.component';
+import { DetailsComponent } from './details/details.component';
 
 
 export const routes: Routes = [
@@ -31,6 +32,12 @@ export const routes: Routes = [
         path: 'favorite-list',
         component: FavoriteListComponent,
         title:'favorite-list'
+    },
+
+    {
+        path: 'product/:id',
+        component: DetailsComponent,
+        title:'product'
     }
 
 ];

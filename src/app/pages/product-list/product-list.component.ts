@@ -19,7 +19,17 @@ export class ProductListComponent {
   constructor(public productService: ProductService) {
       this.isLoading = true;
       this.productService.getProductList().subscribe(data => {
+        this.productService.getFavorites()
+        data.forEach((val, index)=> {
+          if (this.productService.favoriteList.find(id => id === val.id)){
+            data[index]['isInFav'] = true;
+          } else {
+            data[index]['isInFav'] = false;
+          }
+        })
+        
         this.productService.productList = data;
+        console.log (this.productService.productList)
         this.isLoading = false;
       })
   }

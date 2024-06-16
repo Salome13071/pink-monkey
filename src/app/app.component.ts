@@ -7,11 +7,12 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
 import { FilterComponent } from './filter/filter.component';
 import { ProductService } from '../services/product.service';
 import { CartComponent } from './cart/cart.component';
+import { DetailsComponent } from './details/details.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet , HeaderComponent, MainComponent, FooterComponent,ProductListComponent, FilterComponent, CartComponent],
+  imports: [RouterOutlet , HeaderComponent, MainComponent, FooterComponent,ProductListComponent, FilterComponent, CartComponent, DetailsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

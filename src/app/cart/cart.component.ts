@@ -30,12 +30,12 @@ export class CartComponent  implements OnInit{
     this.productService.cartList = this.productService.getCart();
     return this.productService.cartList;
   }
-  removeProductFromCart(productId: number): void{
+  removeProductFromCart(productId: string): void{
     this.productService.cartList = this.productService.cartList.filter (item => item.productId !== productId)
     this.productService.editCart(this.productService.cartList)
   }
 
-  decrement(productId: number): void {
+  decrement(productId: string): void {
     const cart = this.getCartList()
     const getCartIndex = cart.findIndex(item => item.productId === productId)
     if (getCartIndex >=0){ 
@@ -46,7 +46,7 @@ export class CartComponent  implements OnInit{
     }
   }
 
-  increment(productId: number): void {
+  increment(productId: string): void {
     const cart = this.getCartList();
     const getCartIndex = cart.findIndex(item => item.productId === productId)
     if(getCartIndex>=0){
@@ -55,7 +55,7 @@ export class CartComponent  implements OnInit{
     }
   }
 
-  getTotalCartPrice(): number {
+  getTotalCartPrice(): string {
     return this.productService.cartList.reduce(
       (total, item) => {
         let  calcPrice = 0;
@@ -66,7 +66,7 @@ export class CartComponent  implements OnInit{
         }
         calcPrice = calcPrice * item.count;
         return total + calcPrice;
-      }, 0);
+      }, 0).toFixed(2);
   }
 }
 

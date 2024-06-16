@@ -38,7 +38,9 @@
             <div class="cartlistcounter">{{productServise.cartList.length ? productServise.cartList.length : '' }}</div>
         </div>
         
-        <div routerLink="/favorite-list" class="header-main-icon header-main-icon-favorite"></div>
+        <div routerLink="/favorite-list" class="header-main-icon header-main-icon-favorite">
+            <div class="cartlistcounter">{{productServise.favoriteList.length ? productServise.favoriteList.length : '' }}</div>
+        </div>
         <div class="header-main-icon header-main-icon-user"></div>
     </div>
 

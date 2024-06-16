@@ -1,5 +1,5 @@
 export class CartItemDto {
-    public productId: number = 0;
+    public productId: string = '0';
     public count: number = 0;
     public title: string = '';
     public image: string = '';

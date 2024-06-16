@@ -10,7 +10,7 @@ export class ProductService {
 
   public productList: ProductItemDto[] = [];
   public cartList: CartItemDto[] = [];
-  public favoriteList: ProductItemDto[] = [];
+  public favoriteList: string[] = [];
 
   constructor(private http: HttpClient) {
     this.favoriteList = this.getFavorites();
@@ -20,6 +20,9 @@ export class ProductService {
     return this.http.get('https://665c79663e4ac90a04d9a6d5.mockapi.io/pinkmonkey/products') as Observable<ProductItemDto[]>
   }
 
+  getProduct(id: string): Observable<ProductItemDto> {
+    return this.http.get('https://665c79663e4ac90a04d9a6d5.mockapi.io/pinkmonkey/products/' + id) as Observable<ProductItemDto>
+  }
   filterProducts(key: string, value: any): Observable<ProductItemDto[]> {
     return this.http.get(`https://665c79663e4ac90a04d9a6d5.mockapi.io/pinkmonkey/products?${key}=${value}`) as Observable<ProductItemDto[]>
   }
@@ -65,24 +68,25 @@ export class ProductService {
     return (price - ((price * sale) / 100)).toFixed(2)
   }
 
-  toggleFavorite(product: ProductItemDto): void {
-    const index = this.favoriteList.findIndex(item => item.id === product.id);
+  addToFavorite(product: ProductItemDto): void {
+    const index = this.favoriteList.findIndex(id => id === product.id);
     if (index >= 0) {
       this.favoriteList.splice(index, 1);
+      product.isInFav = false;
     } else {
-      this.favoriteList.push(product);
+      this.favoriteList.push(product.id);
+      product.isInFav = true;
     }
     this.editFavorites(this.favoriteList);
   }
 
-  editFavorites(favorites: ProductItemDto[]): void {
+  editFavorites(favorites:string[]): void {
     localStorage.setItem('favorites', JSON.stringify(favorites));
   }
 
-  getFavorites(): ProductItemDto[] {
+  getFavorites(): string[] {
     const favorites = localStorage.getItem('favorites');
     return favorites ? JSON.parse(favorites) : [];
   }
-
 
 }

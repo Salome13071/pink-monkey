@@ -16,12 +16,24 @@
 }
 
 .card-section-img-fav {
-    position: absolute;
-    width: 30px;
-    height: 30px;
+    background-color: rgba(251, 236, 241, 255);
+    border: none;
+    width: 37px;
+}
+
+.card-section-img-fav:hover{
     background-color: #F99DBC;
-    margin-left: 243px;
-    margin-top: 20px;
+    border-radius: 6px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card-section-img-fav-active{
+    background-color: rgba(251, 236, 241, 255);
+    border: none;
+    width: 37px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../assets/images/heart2.svg);
     border-radius: 6px;
 }
 
@@ -39,11 +51,6 @@
     font-size: 28px;
     padding-bottom: 4px;
 
-}
-
-.card-section:hover {
-    transform: scale(1.1);
-    transition: 1s;
 }
 
 .price-part {
@@ -74,9 +81,26 @@
 .add-cart {
     background-color: rgba(251, 236, 241, 255);
     border: none;
-
+}
+.product-detail button{
+    background-color: rgba(251, 236, 241, 255);
+    border: none;
 }
 
+.product-detail button:hover{
+    background-color: #F99DBC;
+    border-radius: 6px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+.add-cart:hover{
+    background-color: #F99DBC;
+    border-radius: 6px;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
 
 
 @media screen and (max-width: 1000px) {
