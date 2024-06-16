@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { CaruselComponent } from "../carusel/carusel.component";
 
 @Component({
-  selector: 'app-main',
-  standalone: true,
-  imports: [RouterModule],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+    selector: 'app-main',
+    standalone: true,
+    templateUrl: './main.component.html',
+    styleUrl: './main.component.css',
+    imports: [RouterModule, CaruselComponent]
 })
 export class MainComponent {
  
@@ -15,4 +16,6 @@ export class MainComponent {
   goToProducts() {
     this.router.navigate(['/products']);
   }
+
+  
 }

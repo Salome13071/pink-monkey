@@ -14,13 +14,11 @@
             </div>
             <div class="stars-btn-text">
                 <div class="product-detail">
-                  <button (click)="goToDetails(payload.id)">Products Details </button>
+                    <button (click)="goToDetails(payload.id)">Products Details </button>
                 </div>
-                <div>
-                    <button [ngClass]="payload.isInFav ? 'card-section-img-fav-active' : 'card-section-img-fav'" (click)="addToFavorite(payload)">
-                        <img  src="../../../../assets/images/heart-icon.svg" alt="#">
-                    </button>
-                   
+                <div class="addToFavorite">
+                    <div [ngClass]="payload.isInFav ? 'card-section-img-fav-active' : 'card-section-img-fav'"
+                        (click)="addToFavorite(payload)"></div>
                 </div>
                 <div>
                     <button class="add-cart" (click)="addToCart(payload)"><img src="../../../../assets/images/shop.svg"

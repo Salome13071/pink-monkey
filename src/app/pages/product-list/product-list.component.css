@@ -29,6 +29,9 @@
     justify-items: center;
     align-items: center;
 }
+.productfullList{
+max-width: 300px;
+}
 
 
 

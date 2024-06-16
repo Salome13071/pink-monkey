@@ -28,7 +28,21 @@
 
 
 
-@media screen and (max-width: 830px) {
+
+@media screen and (max-width: 1420px){
+    .cart-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+}
+}
+
+@media screen and (max-width: 1080px){
+    .cart-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+}}
+
+@media screen and (max-width: 768px) {
 
     .favorite-list {
         margin-left: 0;
@@ -36,4 +50,10 @@
         justify-content: center;
 
     }
+
+    .cart-container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin: 0;
+}
 }

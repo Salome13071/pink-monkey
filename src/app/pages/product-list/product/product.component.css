@@ -1,7 +1,7 @@
 .card-section {
     display: grid;
     gap: 24px;
-    padding: 40px 0;
+    padding: 30px 0;
 
 }
 
@@ -15,31 +15,38 @@
     border-radius: 20px 20px 0px 0px;
 }
 
-.card-section-img-fav {
+.addToFavorite{
     background-color: rgba(251, 236, 241, 255);
     border: none;
     width: 37px;
 }
 
 .card-section-img-fav:hover{
-    background-color: #F99DBC;
     border-radius: 6px;
     transform: scale(1.1);
     transition: 0.5s;
 }
 
+.card-section-img-fav{
+    background-color: rgba(251, 236, 241, 255);
+    border: none;
+    height: 27px;
+    background-repeat: no-repeat;
+    background-image: url(../../../../assets/images/heart-icon.svg);
+    border-radius: 6px;
+} 
 .card-section-img-fav-active{
     background-color: rgba(251, 236, 241, 255);
     border: none;
-    width: 37px;
+    height: 27px;
     background-repeat: no-repeat;
     background-image: url(../../../../assets/images/heart2.svg);
     border-radius: 6px;
 }
 
 .card-section-text {
-    width: 300px;
-    height: 160px;
+    width: 100%;
+    height: auto;
     border-radius: 0px 0px 20px 20px;
     background: rgba(251, 236, 241, 255);
     padding: 0 20px;
@@ -75,7 +82,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding-top: 24px;
+    padding-top: 12px;
 }
 
 .add-cart {
@@ -105,7 +112,7 @@
 
 @media screen and (max-width: 1000px) {
     .card-section {
-        padding: 0;
+        padding: 16px;
     }
 }
 
@@ -113,6 +120,6 @@
 @media screen and (max-width: 768px) {
 
     .card-section {
-        padding: 0;
+        padding: 16px;
     }
 }

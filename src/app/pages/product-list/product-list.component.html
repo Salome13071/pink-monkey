@@ -11,5 +11,5 @@
     
 </div>
 <div class="product-list" *ngIf="!isLoading">
-    <app-product *ngFor="let product of productService.productList" [currency]="currency" [payload]="product"></app-product>
+    <app-product class="productfullList" *ngFor="let product of productService.productList" [currency]="currency" [payload]="product"></app-product>
 </div>

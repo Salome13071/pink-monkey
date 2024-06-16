@@ -1,0 +1,14 @@
+<div class="caruselTitle">
+    <h1>Products</h1>
+</div>
+
+<div class="slider">
+    <div class="slide-track">
+        <div >
+
+        </div>
+        <div class="slide" *ngFor="let item of caruselList">
+			<img (click)="goToDetails(item.id)" src="{{item.image}}" height="200" width="250" alt="" />
+		</div>
+    </div>
+</div>

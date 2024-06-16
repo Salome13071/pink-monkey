@@ -1,11 +1,13 @@
 .details-main-box {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 80px;
     gap: 40px;
 }
 
 .productImg img {
-    max-width: 480px;
+    width: 100%;
+    height: auto;
     border-radius: 20px;
 }
 .aboutProduct{
@@ -43,4 +45,14 @@
  
     transform: scale(1.1);
     transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+
+    .details-main-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px;
+        gap: 10px;
+    }
 }

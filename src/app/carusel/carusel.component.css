@@ -1,0 +1,84 @@
+body {
+    align-items: center;
+    background: #e3e3e3;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.caruselTitle h1 {
+    font-family: "Irish Grover";
+    font-size: 46px;
+    margin: 48px;
+}
+
+
+
+@-webkit-keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1040px;
+    margin-bottom: 40px;
+}
+
+.slider img {
+    height: 250px;
+    cursor: pointer;
+}
+
+.slider::before,
+.slider::after {
+    content: "";
+    height: 250px;
+    position: absolute;
+    width: 250px;
+    z-index: 2;
+}
+
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(200deg);
+}
+
+.slider::before {
+    left: 0;
+    top: 0;
+}
+
+.slider .slide-track {
+    -webkit-animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+    gap: 20px;
+}
+
+.slider .slide {
+    height: 250px;
+    width: 250px;
+}
