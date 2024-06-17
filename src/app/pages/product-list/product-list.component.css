@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-   
+
 }
 
 .meniu-vell h1 {
@@ -28,41 +28,44 @@
     padding-bottom: 24px;
     justify-items: center;
     align-items: center;
-}
-.productfullList{
-max-width: 300px;
+    justify-content: center;
 }
 
+.productfullList {
+    max-width: 300px;
+}
 
 
 
-@media screen and (max-width: 1320px){
+
+@media screen and (max-width: 1320px) {
     .product-list {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-}
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0;
+    }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     .product-list {
         display: grid;
-        grid-template-columns: 1fr 1fr  ;
-}
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .product-list {
         display: grid;
-        grid-template-columns: 1fr   ;
-}
+        grid-template-columns: 1fr;
+    }
 
-.meniu-vell h1 {
-    font-size: 24px;
-}
+    .meniu-vell h1 {
+        font-size: 24px;
+    }
 
-.menu-div{
-    padding: 0 24px;
-}
+    .menu-div {
+        padding: 0 24px;
+    }
 
 }

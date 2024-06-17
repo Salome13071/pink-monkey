@@ -25,7 +25,7 @@ button {
     justify-content: space-between;
     padding: 0 100px;
     align-items: baseline;
-    position: sticky !important;
+    position: static !important;
 
 }
 
@@ -100,9 +100,9 @@ button {
     background-image: url(../../assets/images/8666647_heart_icon.svg);
 }
 
-.header-main-icon-user {
+/* .header-main-icon-user {
     background-image: url(../../assets/images/8666609_user_icon.svg);
-}
+} */
 
 .cartlistcounter{
     width: 24px;
@@ -120,16 +120,6 @@ button {
 .burger-menu {
     display: none;
 }
-
-/* .sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
-
-/* .sticky + .content {
-    padding-top: 60px;
-  } */
 
   .active {
     color: #F99DBC !important;
@@ -155,17 +145,23 @@ button {
 
     }
 
-    @media screen and (min-width: 831px) {
+    @media screen and (min-width: 931px) {
         .header-main-nav-mobile {
             display: none;
         }
     }
 
 
-    @media screen and (max-width: 830px) {
+    @media screen and (max-width: 768px) {
 
         .header-main-icons {
-            display: none;
+            position: absolute;
+            height: 50px;
+            max-width: 350px;
+            width: 100%;
+            justify-content: end;
+            top: 80px;
+        }
         }
 
         .header-main {
@@ -231,7 +227,4 @@ button {
         .header-main-logo {
             transform: scale(0.9);
         }
-
-
     }
-}

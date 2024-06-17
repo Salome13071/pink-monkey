@@ -5,7 +5,7 @@
 
     <div class="aboutProduct">
         <h1>{{productItem.title}}</h1>
-            <div class="cartStyle-textBox-price" >
+            <div class="cartStyle-textBox-price" > Prise: 
                 <p [ngClass]="productItem.sale > 0 ? 'price-line-through' : ''">  {{currency}} {{ productItem.price.toFixed(2) }} </p>
                 <p *ngIf="productItem.sale > 0">{{currency}}{{productService.saledPrice(productItem.price, productItem.sale)}}</p>
             </div>

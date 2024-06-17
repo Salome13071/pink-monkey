@@ -1,0 +1,102 @@
+.body {
+    margin: 0 100px;
+}
+
+.about-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+
+
+.about-box-div h1 {
+    position: relative;
+    top: 100px;
+    left: 40px;
+    font-family: "irish grover";
+}
+
+
+.about-box-div p {
+    position: relative;
+    top: 200px;
+    font-size: 19px;
+}
+
+.about-box-div img {
+    max-width: 600px;
+    width: 100%;
+
+}
+
+.family-img img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 76px;
+    margin-left: 64px;
+}
+
+.about-box2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.about-box2 p {
+    position: relative;
+    bottom: 230px;
+    font-size: 20px;
+    max-width: 550px;
+    width: 100%;
+     
+}
+
+.natia-dato{
+    max-width: 550px;
+    width: 100%;
+}
+
+.pinc-vector2{
+max-width: 600px;
+width: 100%;
+}
+
+@media screen and (max-width: 830px){
+    .about-box{
+        display: grid;
+        grid-template-columns:  1fr;
+        justify-content: center;
+    }
+
+    .about-box2 {
+        display: grid;
+        grid-template-columns: 1fr ;
+        margin-top: 30px;
+        justify-content: center;
+    }
+
+    .pinc-vector2{
+        max-width: 600px;
+        width: 100%;
+        margin-top: 30px;
+        }
+
+        .about-box-div p {
+            position: relative;
+            top: 130px;
+            
+        }
+
+        .family-img img{
+            margin-left: 0;
+            margin-top: 0;
+        }
+        
+        .about-box2 p {
+            position: relative;
+            bottom: 180px;
+            
+        }
+}

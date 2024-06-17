@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+  
+
 
 .main-div{
     background-color: #F99DBC;
@@ -13,7 +15,7 @@
     font-family: "Irish Grover" ;
     font-size: 24px ;
     font-weight: bold;
-    padding:  18px;
+    padding-bottom:  18px;
     text-align: center;
 }
 
@@ -23,6 +25,16 @@ text-align: center;
 
 }
 
+.follow-box{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.follow-box a{
+    color:black ;
+}
 
 @media screen and (max-width: 830px){
     .main-div{

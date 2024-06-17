@@ -21,6 +21,8 @@
 
 .cartStyle-textBox-price {
     font-size: 20px;
+    display: flex;
+    gap: 12px;
 }
 
 .price-line-through {
