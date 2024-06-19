@@ -69,6 +69,10 @@
     margin-top: 40px;
 
 }
+.shopping-list h2{
+    font-family: "Irish Grover";
+    font-size: 46px;
+}
 
 
 .quantity-container {
@@ -112,5 +116,8 @@
         display: flex;
         justify-content: center;
 
+    }
+    .shopping-list h2{
+        font-size: 32px;
     }
 }

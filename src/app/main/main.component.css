@@ -65,10 +65,8 @@
         font-size: 36px;
         font-family: 'Irish grover';
         color: black;
-        top: 18%;
-        left: 20%;
-        line-height: 55px;
-        text-align: center;
+        top: 27%;
+        left: 25%;
     }
 
 
@@ -77,6 +75,5 @@
         height: 50px;
         font-size: 16px;
         position: absolute;
-        top: 67%;
     }
 }

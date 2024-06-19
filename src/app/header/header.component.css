@@ -157,10 +157,11 @@ button {
         .header-main-icons {
             position: absolute;
             height: 50px;
-            max-width: 350px;
+            max-width: 300px;
             width: 100%;
             justify-content: end;
             top: 80px;
+            column-gap: 16px;
         }
         }
 

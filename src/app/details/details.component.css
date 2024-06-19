@@ -1,11 +1,21 @@
+.main-box{
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .details-main-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 80px;
     gap: 40px;
+    max-width: 1240px;
+    align-items: center;
 }
 
 .productImg img {
+    max-width: 560px;
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -56,5 +66,10 @@
         grid-template-columns: 1fr;
         margin: 20px;
         gap: 10px;
+        margin-top: 60px;
+    }
+
+    .productImg img {
+        max-width: 350px;
     }
 }

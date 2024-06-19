@@ -92,6 +92,7 @@
 .product-detail button{
     background-color: rgba(251, 236, 241, 255);
     border: none;
+    color: black;
 }
 
 .product-detail button:hover{
