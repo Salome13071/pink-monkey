@@ -4,6 +4,11 @@
 
 }
 
+.favorite-list h2{
+    font-family: "Irish Grover";
+    font-size: 46px;
+}
+
 .cart-container {
     margin: 40px 80px;
     display: grid;
