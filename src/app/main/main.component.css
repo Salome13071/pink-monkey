@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
-.main-image-box img {
+.main-image-box {
+    margin-top: -150px;
+    height: 104vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../../assets/images/Maren\ Caruso\ -\ Food\ and\ Still\ Life\ Photography.jpg);
+}
+
+/* .main-image-box img {
     
     padding-top: 60px;
     width: 100%;
@@ -8,9 +17,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;
-}
+} */
 
-.losung-text{
+.losung-text {
     position: absolute;
     width: 380px;
     height: 340px;
@@ -24,11 +33,18 @@
 }
 
 
+
+
 .button-div {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    z-index: 99999;
+    transform: translateX(-50%);
 }
 
 .go-to-products-button:hover {
@@ -56,10 +72,17 @@
 
 
 
+@media screen and (max-width:1024px) {
 
-@media screen and (max-width: 830px){
+    .main-image-box {
+        margin-top: -100px;
+    }
 
-    .losung-text{
+}
+
+@media screen and (max-width: 830px) {
+
+    .losung-text {
         position: absolute;
         width: 200px;
         font-size: 36px;
@@ -70,7 +93,7 @@
     }
 
 
-    .go-to-products-button{
+    .go-to-products-button {
         width: 200px;
         height: 50px;
         font-size: 16px;

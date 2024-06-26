@@ -28,5 +28,5 @@ export class AppComponent {
       }
     })
   }
-  title = 'card-app';
+
 }

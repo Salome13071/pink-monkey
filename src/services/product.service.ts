@@ -31,18 +31,21 @@ export class ProductService {
     const cart = this.getCart()
     const existingItemIndex = cart.findIndex(item => item.productId === product.id);
     if (existingItemIndex >= 0) {
+      product.isInCart = true;
       cart[existingItemIndex].count++
       this.editCart(this.cartList);
     } else {
+      product.isInCart = false;
       const newItem = new CartItemDto();
       newItem.productId = product.id
       newItem.count = 1;
       newItem.image = product.image,
-        newItem.price = product.price;
+      newItem.price = product.price;
       newItem.sale = product.sale;
       newItem.title = product.title
       this.cartList.push(newItem)
       this.editCart(this.cartList);
+  
     }
   }
 

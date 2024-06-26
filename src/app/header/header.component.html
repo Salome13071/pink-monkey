@@ -1,34 +1,51 @@
 <div class="header-main">
-
     <div class="header-main-logo">
         <a routerLink="">
             <img src="../../assets/images/Main logo text.png" alt="Pink Monkey logo">
         </a>
     </div>
     <div class="headerNav">
-        <button class="burger-menu" (click)="toggleMenu()">
-            <img src="../../assets/images/manu mobile button.svg" alt="">
-        </button>
+        <label class="hamburger burger-menu">
+            <input type="checkbox"  (click)="toggleMenu()" [checked]="isMenuOpen">
+            <svg viewBox="0 0 32 32">
+                <path class="line line-top-bottom"
+                    d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                </path>
+                <path class="line" d="M7 16 27 16"></path>
+            </svg>
+        </label>
         <nav class="header-main-nav">
             <ul>
                 <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
                 <li> <a routerLink="/about" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">About</a></li>
                 <li> <a routerLink="/products" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">Porducts</a></li>
-                <li><a routerLink="">Contacts</a></li>
-                <li><a routerLink="">Blog</a></li>
+                        [routerLinkActiveOptions]="{exact: true}">Products</a></li>
+                <!-- <li><a routerLink="">Contacts</a></li>
+                <li><a routerLink="">Blog</a></li> -->
             </ul>
         </nav>
-        <nav class="header-main-nav-mobile" *ngIf="isMenuOpen">
+        <nav class="header-main-nav-mobile"  [ngClass]="isMenuOpen ? 'openNav' : ''">
             <ul (click)="toggleMenu()">
                 <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
                 <li> <a routerLink="/about" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">About</a></li>
                 <li> <a routerLink="/products" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact: true}">Porducts</a></li>
-                <li><a routerLink="">Contacts</a></li>
-                <li><a routerLink="">Blog</a></li>
+                        [routerLinkActiveOptions]="{exact: true}">Products</a></li>
+                <li>
+                    <div routerLink="/cart" class="header-main-icon header-main-icon-shopping">
+                        <div class="cartlistcounter" *ngIf="productServise.cartList.length>0">{{
+                            productServise.cartList.length }}</div>
+                    </div>
+                </li>
+
+                <li>
+                    <div routerLink="/favorite-list" class="header-main-icon header-main-icon-favorite">
+                        <div class="cartlistcounter" *ngIf="productServise.favoriteList.length>0">{{
+                            productServise.favoriteList.length}}</div>
+                    </div>
+                </li>
+
             </ul>
         </nav>
     </div>
@@ -37,12 +54,13 @@
 
         <div *ngIf="searchActive()"><app-search></app-search></div>
         <div routerLink="/cart" class="header-main-icon header-main-icon-shopping">
-            <div class="cartlistcounter">{{productServise.cartList.length ? productServise.cartList.length : '' }}</div>
+            <div class="cartlistcounter" *ngIf="productServise.cartList.length>0">{{ productServise.cartList.length }}
+            </div>
         </div>
 
         <div routerLink="/favorite-list" class="header-main-icon header-main-icon-favorite">
-            <div class="cartlistcounter">{{productServise.favoriteList.length ? productServise.favoriteList.length : ''
-                }}</div>
+            <div class="cartlistcounter" *ngIf="productServise.favoriteList.length>0">{{
+                productServise.favoriteList.length}}</div>
         </div>
         <!-- <div class="header-main-icon header-main-icon-user"></div> -->
     </div>

@@ -1,44 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
-  
 
 
-.main-div{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-div {
     background-color: #F99DBC;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
-    padding: 0 70px; 
+    padding: 0 70px;
     padding-top: 32px;
+    padding-bottom: 52px;
 }
 
-.main-div div h1{
-    font-family: "Irish Grover" ;
-    font-size: 24px ;
+.main-div>div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main-div div h1 {
+    font-family: "Irish Grover";
+    font-size: 24px;
     font-weight: bold;
-    padding-bottom:  18px;
+    padding-bottom: 18px;
     text-align: center;
 }
 
-.main-div div p{
-font-size: 18px;
-text-align: center;
+.main-div div p {
+    font-size: 18px;
+    text-align: center;
 
 }
 
-.follow-box{
-    display: grid;
-    align-items: center;
+.follow-box {
+ 
     text-align: center;
     color: black;
 }
 
-.follow-box a{
-    color:black ;
+.follow-box a {
+    color: black;
 }
 
-@media screen and (max-width: 830px){
-    .main-div{
+@media screen and (max-width: 830px) {
+    .main-div {
         display: grid;
-        grid-template-columns:  1fr;
+        grid-template-columns: 1fr;
     }
 }

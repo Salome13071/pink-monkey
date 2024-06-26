@@ -1,11 +1,15 @@
 .body {
-    margin: 0 100px;
+    padding: 0 40px;
 }
 
 .about-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
+    max-width: 1440px;
+    margin: auto;
+    justify-items:center
+
 }
 
 
@@ -41,7 +45,11 @@
 .about-box2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 30px;   
+     max-width: 1440px;
+    margin: auto;
+    justify-items:center;
+    margin-top: 94px;
 }
 
 .about-box2 p {

@@ -17,17 +17,21 @@ export class HeaderComponent {
   
   isMenuOpen: boolean = false;
 
+
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
+ 
   }
-
+ 
+  // searchActive(): boolean {
+  //   if(this.router.url === '/products') {
+  //     return true;
+  //   }
+  //   return false; 
+  // }
   searchActive(): boolean {
-    if(this.router.url === '/products') {
-      return true;
-    }
-    return false; 
+    return this.router.url === '/products';
   }
-
 }
 
 

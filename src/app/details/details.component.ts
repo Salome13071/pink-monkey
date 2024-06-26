@@ -20,7 +20,6 @@ export class DetailsComponent {
       this.productService.getProduct(detailId).subscribe(Item => {
         this.productItem = Item
       })
-      
   }
   addToCart(product: ProductItemDto) {
     this.productService.addToCart(product);

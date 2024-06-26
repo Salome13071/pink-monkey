@@ -10,4 +10,6 @@ export class ProductItemDto {
     saleOn: boolean = false;
     isInFav: boolean = false;
     description: string = '';
+    isInCart: boolean = false;
+
 }

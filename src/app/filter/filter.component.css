@@ -1,10 +1,65 @@
-.filter-section{
+.filter-section {
     display: flex;
     gap: 6px;
 }
 
-
-
- label {
+label {
     border-color: #f7c0d2;
-    }
+}
+
+
+select {
+    appearance: none;
+    outline: 10px rgb(255, 255, 255);
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: #F99DBC;
+    background-image: none;
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 12em;
+    height: 3em;
+    border-radius: .25em;
+    overflow: hidden;
+}
+
+.select::after {
+    content: '\25BC';
+    color: #fbfbfb;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #F99DBC;
+    transition: .25s all ease;
+    pointer-events: none;
+}
+
+
+
+a {
+    font-weight: bold;
+    color:#34495e;
+    text-decoration: drop-shadow;
+    padding: .25em;
+    border-radius: .50em;
+    background: pink;
+}
+
+
+
+.down_note {
+    display: flex;
+    justify-content: center;  
+}

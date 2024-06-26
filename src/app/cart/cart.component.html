@@ -1,23 +1,28 @@
-<div class="shopping-list">
-    <h2>Your Shopping List</h2>
-</div>
+<section class="cart_section">
+    <div class="shopping-list">
+        <h2>Your Shopping List</h2>
+    </div>
 
 
-<div class="cart-container">
-    <div *ngIf="!productService.cartList">Your cart is empty</div>
+    <div class="cart-container">
+        <div *ngIf="productService.cartList.length <=0" class="emptyCart">
+            <span>Cart is empty!</span> 
+            <img src="../../assets/images/candyShop.svg" alt="shop-rafiki">
+        </div>
 
-    <div class="cart-list" *ngFor="let item of productService.cartList">
+        <div class="cart-list" *ngFor="let item of productService.cartList">
 
-        
+
             <img class="cart-container-img" [src]="item.image" alt="{{ item.title }}">
             <div class="cartStyle-textBox">
                 <h3> {{ item.title }}</h3>
-                <div class="cartStyle-textBox-price" >
-                    <p [ngClass]="item.sale > 0 ? 'price-line-through' : ''">  {{currency}} {{ item.price.toFixed(2) }} </p>
+                <div class="cartStyle-textBox-price">
+                    <p [ngClass]="item.sale > 0 ? 'price-line-through' : ''"> {{currency}} {{ item.price.toFixed(2) }}
+                    </p>
                     <p *ngIf="item.sale > 0">{{currency}}{{productService.saledPrice(item.price, item.sale)}}</p>
                 </div>
-                
-                
+
+
 
                 <div class="quantity-container">
                     <button (click)="decrement(item.productId)">-</button>
@@ -29,10 +34,10 @@
                     <button (click)="removeProductFromCart(item.productId)" class="remove-button">Remove</button>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <div class="price-container">
-        Total Price: {{currency}} {{getTotalCartPrice()}}
+        <div class="price-container">
+            Total Price: {{currency}} {{getTotalCartPrice()}}
+        </div>
     </div>
-</div>
-
+</section>

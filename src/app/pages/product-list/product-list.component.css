@@ -1,71 +1,161 @@
+.products_content {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 40px;
+}
+
 .menu-div {
-    margin: 48px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 120px;
-    gap: 20px;
+  margin: 48px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .meniu-vell {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 
 }
 
 .meniu-vell h1 {
-    font-size: 40px;
-    font-family: "Irish Grover";
+  font-size: 40px;
+  font-family: "Irish Grover";
 }
 
 
 .product-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 20px;
-    padding: 0 30px;
-    padding-bottom: 24px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 28px;
+  padding-bottom: 24px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .productfullList {
-    max-width: 300px;
+  width: 100%;
 }
 
 
 
 
 @media screen and (max-width: 1320px) {
-    .product-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 0;
-    }
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .product-list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
 @media screen and (max-width: 768px) {
-    .product-list {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+  .product-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
-    .meniu-vell h1 {
-        font-size: 24px;
-    }
+  .meniu-vell h1 {
+    font-size: 24px;
+  }
 
-    .menu-div {
-        padding: 0 24px;
-    }
+  .menu-div {
+    padding: 0 x;
+  }
 
+  .select {
+    width: 11em;
+  }
+
+
+}
+
+@media screen and (max-width: 768px) {
+  .select {
+    width: 10em;
+  }
+}
+
+/* -------------- loader-------------- */
+
+.loader_container {
+  height: 30vh;
+  padding-top: 30px;
+  padding-bottom: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  --dim: 3rem;
+  width: var(--dim);
+  height: var(--dim);
+  position: relative;
+  animation: spin988 2s linear infinite;
+}
+
+.loader .circle {
+  --color: #F99DBC;
+  --dim: 1.2rem;
+  width: var(--dim);
+  height: var(--dim);
+  background-color: var(--color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.loader .circle:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader .circle:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader .circle:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes spin988 {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+
+  20%,
+  25% {
+    transform: scale(1.3) rotate(90deg);
+  }
+
+  45%,
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+
+  70%,
+  75% {
+    transform: scale(1.3) rotate(270deg);
+  }
+
+  95%,
+  100% {
+    transform: scale(1) rotate(360deg);
+  }
 }

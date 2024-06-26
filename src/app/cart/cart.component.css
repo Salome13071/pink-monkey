@@ -1,5 +1,11 @@
+.cart_section {
+    max-width: 1440px;
+    padding: 0 40px;
+    margin: auto;
+}
+
 .cart-container {
-    margin: 40px 80px;
+    margin: 40px auto;
 }
 
 .price-container {
@@ -69,7 +75,8 @@
     margin-top: 40px;
 
 }
-.shopping-list h2{
+
+.shopping-list h2 {
     font-family: "Irish Grover";
     font-size: 46px;
 }
@@ -104,7 +111,28 @@
     text-decoration: line-through;
     opacity: 30%;
 }
+.emptyCart {
+    max-width: 400px;
+    margin: auto;
+    position: relative;
+}
 
+.emptyCart span{
+    position: absolute;
+    padding: 6px 14px;
+    background-color: rgba(255, 255, 255, 0.818);
+    border-radius: 22px;
+    top: 18%;
+    left: 12%;
+    font-family:cursive;
+    font-weight: 400;
+    color:rgba(0, 0, 0, 0.811);
+    backdrop-filter: blur(8px);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.emptyCart img{
+    width: 100%;
+}
 
 @media screen and (max-width: 830px) {
     .cart-container {
@@ -115,9 +143,14 @@
         margin-left: 0;
         display: flex;
         justify-content: center;
-
     }
-    .shopping-list h2{
+
+    .shopping-list h2 {
         font-size: 32px;
+    }
+
+    .emptyCart span{
+        left: 10%;
+        padding: 6px 12px;
     }
 }

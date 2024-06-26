@@ -1,20 +1,26 @@
-<div class="favorite-list">
-    <h2>Your Favorite Products List</h2>
-</div>
+<section class="favorite_section">
 
-<div class="cart-container">
-    <div *ngIf="productService.favoriteList.length === 0">Your favorite list is empty</div> 
 
-<div *ngFor="let favPorduct of favProductsList">
-    <app-product [payload]="favPorduct" [currency]="currency"></app-product>
 
-    <div class="fav-remove-button" >
-        <button class="remove-button" (click)="removeFavorite(favPorduct.id)">Remove from Favorites</button>
+    <div class="favorite-list">
+        <h2>Your Favorite Products List</h2>
     </div>
-    
-    <div>
-</div>
-</div>
+    <div *ngIf="productService.favoriteList.length <=0" class="emptyCart">
+        <span>favorite list is empty!</span>
+        <img src="../../assets/images/candyShop.svg" alt="shop-rafiki">
+    </div>
+    <div class="cart-container">
+   
 
+        <div *ngFor="let favPorduct of favProductsList">
+            <app-product [payload]="favPorduct" [currency]="currency"></app-product>
 
+            <div class="fav-remove-button">
+                <button class="remove-button" (click)="removeFavorite(favPorduct.id)">Remove from Favorites</button>
+            </div>
 
+            <div>
+            </div>
+        </div>
+    </div>
+</section>

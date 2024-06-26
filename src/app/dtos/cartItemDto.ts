@@ -5,5 +5,6 @@ export class CartItemDto {
     public image: string = '';
     public price: number = 0;
     public sale: number = 0;
-    
+    public isInCart: boolean = false;
+
 }

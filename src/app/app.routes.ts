@@ -13,38 +13,38 @@ export const routes: Routes = [
     {
         path: '',
         component: MainComponent,
-        title:'Home',
+        title:'PinkMonkey',
         pathMatch: 'full'
     },
 
     {
         path: 'products',
         component: ProductListComponent,
-        title:'products'
+        title:'PinkMonkey - products'
     }
     ,
     {
         path: 'cart',
         component: CartComponent,
-        title:'cart'
+        title:'PinkMonkey - cart'
     },
 
     {
         path: 'favorite-list',
         component: FavoriteListComponent,
-        title:'favorite-list'
+        title:'PinkMonkey - favorite-list'
     },
 
     {
         path: 'product/:id',
         component: DetailsComponent,
-        title:'product'
+        title:'PinkMonkey - product'
     },
 
     {
         path: 'about',
         component: AboutComponent,
-        title:'about'
+        title:'PinkMonkey - about'
     }
 
 ];
